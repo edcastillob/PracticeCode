@@ -1,0 +1,5 @@
+vengo ejecutando linea a linea codigo JS
+
+quiero pedir informacion al servidor    ---------------> tiempo x
+
+quiero mostrar esa informacion <li></li>

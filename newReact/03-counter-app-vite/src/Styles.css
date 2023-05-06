@@ -1,0 +1,27 @@
+html, body {
+    background-color: #21232A;
+    color: white;
+    font-family:  Helvetica, Arial, sans-serif;
+    font-size: 1.3rem;
+    padding: 70px;
+    text-align: center;
+}
+
+
+.suma {
+  background-color: #4CAF50; 
+  padding: 5px;
+  margin: 2px;
+} 
+.resta {
+  background-color: #f44336;  
+  padding: 5px;
+  margin: 2px;
+
+} 
+.reset {
+  background-color: #b6c5ca;  
+  padding: 5px;  
+  margin: 2px;
+
+} 

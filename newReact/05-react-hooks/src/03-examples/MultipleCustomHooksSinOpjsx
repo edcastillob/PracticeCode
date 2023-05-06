@@ -1,0 +1,49 @@
+import { useCounter } from "../hooks/useCounter";
+import { useFetch } from "../hooks/useFetch";
+
+
+
+
+
+export const MultipleCustomHooks = () => {
+
+    const { counter, increment, decrement, reset } = useCounter(1);
+
+    const { data, isLoading, hasError } = useFetch(`https://rickandmortyapi.com/api/character/${ counter }`);
+    
+    const { name, species, gender, image, status } =!!data && data ;
+
+  return (
+    <>
+    <h1>Rick and Morty</h1>
+    <hr />
+ 
+    <button className="btn btn-primary" disabled={ isLoading } onClick={ () => decrement() }  > Prev </button>
+    <button onClick={ reset } disabled={ isLoading } className="btn btn-primary" >Reset</button>
+    <button onClick={ increment } disabled={ isLoading } className="btn btn-primary" >Next</button>
+   {
+        isLoading 
+        ? 
+            <div className="alert alert-info text-center">
+                Loading...
+            </div>
+        :
+            <>
+                <div className="card mt-4"  style={{ width: "18rem" }}>
+                <img className="card-img-top" src={ image } alt={ name } />
+                <div className="card-body">
+                    <p className="card-text text-center">{ status }</p>
+                </div>
+                </div>
+            {/* <div className="text-center border"><img src={ image } className="card" alt={ name }/></div> */}
+            <blockquote className="blockquote text-end">
+                <p className="mb-1">{ name }</p>
+                <footer className="blockquote-footer">Especie: { species } Genero: { gender }</footer>
+            </blockquote>
+            </>
+   }
+
+
+    </>
+  )
+}
