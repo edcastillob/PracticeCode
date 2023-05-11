@@ -1,13 +1,18 @@
+import React from 'react';
 
 
+export const ShowIncrement = React.memo( ({ increment }) => {
 
-export const ShowIncrement = ({ increment }) => {
-  return (
-    <button  
-    onClick={ () => { 
-        increment();
-     }} 
-     className="btn btn-primary"> + 1 </button>   
-    
-  )
-}
+    console.log(' Me volví a generar :( ');
+
+    return (
+        <button
+            className="btn btn-primary"
+            onClick={() => {
+                increment( 5 );
+            }}
+        >
+            Incrementar
+        </button>
+    )
+})

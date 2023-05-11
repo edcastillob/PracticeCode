@@ -1,27 +1,31 @@
-import { useState } from "react";
-import { useCounter } from "../hooks"
-import { Small } from "./Small";
-
-
-
+import { useState } from 'react';
+import { useCounter } from '../hooks'
+import { Small } from './Small';
 
 export const Memorize = () => {
 
-    const { counter, increment } = useCounter(10);
-    const [show, setShow] = useState(true);
+    const { counter, increment } = useCounter( 10 );
+    const [ show, setShow ] = useState(true)
 
-  return (
-    <>
-    <div className="text-center">
-    <h1>Counter</h1>
-    <Small value = { counter }/>
-    <hr />
+    return (
+        <>
+            <h1>Counter: <Small value={ counter } />  </h1>
+            <hr />
 
-     <button  onClick={ increment } className="btn btn-primary"> + 1 </button>   
-     <button  onClick={ () => setShow( !show ) } className="btn btn-outline-primary">
-      Show/Hiden { JSON.stringify( show ) }</button>   
+            <button
+                className="btn btn-primary"
+                onClick={ () => increment() }
+            >
+                +1
+            </button>
 
-     </div>
-     </>
-  )
+            <button
+                className="btn btn-outline-primary"
+                onClick={ () => setShow( !show )  }
+            >
+                Show/Hide { JSON.stringify(show) } 
+            </button>
+        
+        </>
+    )
 }
