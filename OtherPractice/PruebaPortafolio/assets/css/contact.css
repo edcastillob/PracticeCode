@@ -1,0 +1,65 @@
+form {
+    font-size: 1.2rem;
+}
+
+form label {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+}
+
+input,
+input:focus,
+textarea,
+textarea:focus {
+    width: 100%;
+    padding: 1rem;
+    color: var(--black);
+    background-color: rgba(0,0,0,.1);
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+    margin: 1rem 0 2rem;
+}
+
+textarea {
+    resize: none;
+}
+
+form button {
+    background-color: var(--secondary);
+    border: none;
+    border-radius: 15px;
+    color: var(--white);
+    cursor: pointer;
+    margin: 3rem;
+    padding: 1rem;
+    transition: background-color .3s ease;
+}
+
+form button:hover {
+    background-color: var(--secondary-dark);
+}
+
+#social-media img {
+    background-color: var(--white);
+    border-radius: 10rem;
+    margin: 1rem;
+    transition: all .3s ease
+}
+
+#social-media a {
+    text-decoration: none;
+}
+
+#linkedin:hover {
+    background-color: #0077b5;
+}
+
+#github:hover {
+    background-color: #000;
+}
+
+#youtube:hover {
+    background-color: red;
+}
